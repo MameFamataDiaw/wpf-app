@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
         mc:Ignorable="d"
-        Title="ModifierCategorie" Height="300" Width="600">
+        Title="Modification Catégorie" Height="300" Width="600">
     <Grid>
         <StackPanel Margin="10">
-            <Label Content="Code de la categorie" Margin="0,0,0,5" Width="194" RenderTransformOrigin="-0.22,1.62"/>
+            <Label Content="Code de la categorie" Margin="0,0,0,5" Width="194" RenderTransformOrigin="-0.22,1.62" FontWeight="Bold"/>
             <TextBox x:Name="txtCodeCategorie" Width="200" Margin="0,0,0,10" Text="{Binding CodeCategorie}" />
-            <Label Content="Libelle de la categorie" Margin="0,0,0,5" Width="194" RenderTransformOrigin="-0.22,1.62"/>
+            <Label Content="Libelle de la categorie" Margin="0,0,0,5" Width="194" RenderTransformOrigin="-0.22,1.62" FontWeight="Bold"/>
             <TextBox x:Name="txtLibelleCategorie" Width="200" Margin="0,0,0,10" Text="{Binding LibelleCategorie}"/>
-            <Button Content="Enregistrer" Click="saveBtnModifier_Click" RenderTransformOrigin="0.49,3.73" Margin="10" Width="60"/>
+            <Button Content="Enregistrer" Click="saveBtnModifier_Click" RenderTransformOrigin="0.49,3.73" Margin="10" Width="100" Height="35" FontWeight="Bold"/>
         </StackPanel>
     </Grid>
 </Window>

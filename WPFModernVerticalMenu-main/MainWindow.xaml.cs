@@ -24,6 +24,7 @@ namespace WPFModernVerticalMenu
         public MainWindow()
         {
             InitializeComponent();
+            fContainer.Navigate(new Pages.Home());
         }
 
         private void BG_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)

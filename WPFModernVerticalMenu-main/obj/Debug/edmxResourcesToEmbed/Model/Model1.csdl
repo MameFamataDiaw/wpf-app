@@ -5,8 +5,8 @@
       <PropertyRef Name="IdCategorie" />
     </Key>
     <Property Name="IdCategorie" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CodeCategorie" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
-    <Property Name="LibelleCategorie" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CodeCategorie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LibelleCategorie" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityContainer Name="bdVenteEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Categories" EntityType="Self.Categorie" />

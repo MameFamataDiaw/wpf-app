@@ -6,12 +6,12 @@
       xmlns:local="clr-namespace:WPFModernVerticalMenu.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Home">
+      Title="Liste Catégorie">
 
     <Grid>
         <StackPanel>
-            <Button Content="Ajouter une nouvelle categorie" Click="BtnAjouter_Cick" Margin="300,20" Width="100"/>
-            <DataGrid Name="dgCategorie" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False">
+            <Button Content="Ajouter une nouvelle categorie" Click="BtnAjouter_Cick" Margin="300,20" Width="196" Height="41" FontWeight="Bold"/>
+            <DataGrid Name="dgCategorie" SelectionChanged="DataGrid_SelectionChanged" AutoGenerateColumns="False" CanUserAddRows="False" FontWeight="Bold">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding IdCategorie}" Width="Auto"/>
                     <DataGridTextColumn Header="Code categorie" Binding="{Binding CodeCategorie}" Width="*"/>
@@ -20,8 +20,8 @@
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button Content="Modifier" Click="BtnModifier_Cick" Tag="{Binding IdCategorie}" Margin="5"/>
-                                    <Button Content="Supprimer" Click="BtnSupprimer_Click" Tag="{Binding IdCategorie}" Margin="5"/>
+                                    <Button Content="Modifier" Click="BtnModifier_Cick" Tag="{Binding IdCategorie}" Margin="5" Background="#4682B4" Foreground="#FFFF"/>
+                                    <Button Content="Supprimer" Click="BtnSupprimer_Click" Tag="{Binding IdCategorie}" Margin="5" Background="#FF0000" Foreground="#FFF"/>
                                 </StackPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
