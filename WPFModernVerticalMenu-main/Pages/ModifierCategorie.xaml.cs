@@ -31,19 +31,28 @@ namespace WPFModernVerticalMenu.Pages
             this.DataContext = categorie;
         }
 
+
+        /// <summary>
+        /// ACTION DE MODIFICATION D'UNE CATEGORIE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveBtnModifier_Click(object sender, RoutedEventArgs e)
         {
-            // Valide et sauvegarde les modifications
-            if (!string.IsNullOrEmpty(txtCodeCategorie.Text) || !string.IsNullOrEmpty(txtLibelleCategorie.Text))
+            if (string.IsNullOrEmpty(txtCodeCategorie.Text))
+            {
+                MessageBox.Show("Le champs code est obligatoire.");
+            }
+            else if (string.IsNullOrEmpty(txtLibelleCategorie.Text))
+            {
+                MessageBox.Show("Le champs libelle est obligatoire.");
+            }
+            else
             {
                 categorie.CodeCategorie = txtCodeCategorie.Text;
                 categorie.LibelleCategorie = txtLibelleCategorie.Text;
                 this.DialogResult = true;
                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Tous les champs sont obligatoires.");
             }
         }
     }

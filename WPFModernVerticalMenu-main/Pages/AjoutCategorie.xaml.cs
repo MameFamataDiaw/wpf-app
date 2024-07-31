@@ -27,11 +27,25 @@ namespace WPFModernVerticalMenu.Pages
             db = new bdVenteEntities();
         }
 
+        /// <summary>
+        /// ACTION D'AJOUT D'UNE CATEGORIE
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAjouter_Click(object sender, RoutedEventArgs e)
         {
             string code = txtCodeCategorie.Text;
             string libelle = txtlibelleCategorie.Text;
-            if (!string.IsNullOrEmpty(code) || !string.IsNullOrEmpty(libelle))
+
+            if (string.IsNullOrEmpty(code))
+            {
+                MessageBox.Show("Le champs code est obligatoire.");
+            }
+            else if (string.IsNullOrEmpty(libelle))
+            {
+                MessageBox.Show("Le champs libelle est obligatoire.");
+            }
+            else
             {
                 // Ajoute la nouvelle catégorie à la base de données
                 Categorie categorie = new Categorie { 
@@ -45,10 +59,6 @@ namespace WPFModernVerticalMenu.Pages
                 // Ferme la fenêtre de dialogue et renvoie un résultat positif
                 this.DialogResult = true;
                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Tous les champs sont obligatoires.");
             }
         }
     }
